@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.0.1.RELEASE'
+}
+
+sourceCompatibility = 1.8
+group = 'com.github.gregwhitaker'
+version = '0.1.0'
+
+repositories {
+    jcenter()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.graphql-java:graphql-spring-boot-starter:4.0.0'
+    compile 'com.graphql-java:graphiql-spring-boot-starter:4.0.0'
+}
