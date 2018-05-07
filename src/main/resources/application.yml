@@ -2,6 +2,9 @@ spring:
   application:
     name: springboot-graphql-example
 
+server:
+  port: 9000
+
 graphql:
   servlet:
     mapping: /graphql
