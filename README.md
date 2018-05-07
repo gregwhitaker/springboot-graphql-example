@@ -12,7 +12,7 @@ The example exposes a GraphQL API that allows the user to store and query `Link`
 
 2. Once the application has started, use the embedded [GraphiQL](https://github.com/graphql/graphiql) environment to interact with the API at [http://localhost:8080/graphiql](http://localhost:8080/graphiql).
 
-3. To list all `Link` objects execute the following graphql query in the [GraphiQL interface](http://localhost:8080/graphiql):
+3. To list all `Link` objects, execute the following graphql query in the [GraphiQL interface](http://localhost:8080/graphiql):
 
         {
           allLinks {
@@ -37,6 +37,63 @@ The example exposes a GraphQL API that allows the user to store and query `Link`
               {
                 "url": "http://graphql.org/learn/",
                 "description": "The official docks"
+              }
+            ]
+          }
+        }
+
+4. Next, add a new `Link` by executing the following graphql mutation in the [GraphiQL interface](http://localhost:8080/graphiql):
+
+        mutation linkCreate {
+          linkCreate(
+            url: "https://www.google.com",
+            description: "Google"
+          ) {
+            url
+            description
+          }
+        }
+
+    If the mutation was successful you should see the following response:
+    
+        {
+          "data": {
+            "linkCreate": {
+              "url": "https://www.google.com",
+              "description": "Google"
+            }
+          }
+        }
+
+5. Finally, execute the `allLinks` query again by running the following graphql query in the [GraphiQL interface](http://localhost:8080/graphiql):
+
+        {
+          allLinks {
+            url
+            description
+          }
+        }
+        
+    You should see the link you added now being returned in the response:
+
+        {
+          "data": {
+            "allLinks": [
+              {
+                "url": "https://www.netifi.com",
+                "description": "Autonomous microservices platform"
+              },
+              {
+                "url": "http://howtographql.com",
+                "description": "Your favorite GraphQL page"
+              },
+              {
+                "url": "http://graphql.org/learn/",
+                "description": "The official docks"
+              },
+              {
+                "url": "https://www.google.com",
+                "description": "Google"
               }
             ]
           }
