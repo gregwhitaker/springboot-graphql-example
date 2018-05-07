@@ -1,5 +1,7 @@
 # springboot-graphql-example
 
+An example of a [GraphQL](http://graphql.org/) service implemented in [Spring Boot](https://projects.spring.io/spring-boot/).
+
 ## License
 MIT License
 
