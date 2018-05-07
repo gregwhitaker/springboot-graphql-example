@@ -3,6 +3,8 @@
 
 An example of a [GraphQL](http://graphql.org/) service implemented in [Spring Boot](https://projects.spring.io/spring-boot/).
 
+The example exposes a GraphQL API that allows the user to store and query `Link` objects containing a url and a short description.
+
 ## Running the Example
 1. Start the example by running the following Gradle command:
 
@@ -10,7 +12,7 @@ An example of a [GraphQL](http://graphql.org/) service implemented in [Spring Bo
 
 2. Once the application has started, use the embedded [GraphiQL](https://github.com/graphql/graphiql) environment to interact with the API at [http://localhost:8080/graphiql](http://localhost:8080/graphiql).
 
-3. To list all `Link` objects execute the following graphql query in the GraphiQL interface:
+3. To list all `Link` objects execute the following graphql query in the [GraphiQL interface](http://localhost:8080/graphiql):
 
         {
           allLinks {
