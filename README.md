@@ -4,14 +4,44 @@
 An example of a [GraphQL](http://graphql.org/) service implemented in [Spring Boot](https://projects.spring.io/spring-boot/).
 
 ## Running the Example
-You can start the example by running the following Gradle command:
+1. Start the example by running the following Gradle command:
 
-    $ ./gradlew bootRun 
+        $ ./gradlew bootRun 
 
-Once the application has started, use the embedded [Graphiql](https://github.com/graphql/graphiql) environment to interact with the API at [http://localhost:8080/graphiql](http://localhost:8080/graphiql).
+2. Once the application has started, use the embedded [GraphiQL](https://github.com/graphql/graphiql) environment to interact with the API at [http://localhost:8080/graphiql](http://localhost:8080/graphiql).
+
+3. To list all `Link` objects execute the following graphql query in the GraphiQL interface:
+
+        {
+          allLinks {
+            url
+            description
+          }
+        }
+        
+    You should see the following response:
+
+        {
+          "data": {
+            "allLinks": [
+              {
+                "url": "https://www.netifi.com",
+                "description": "Autonomous microservices platform"
+              },
+              {
+                "url": "http://howtographql.com",
+                "description": "Your favorite GraphQL page"
+              },
+              {
+                "url": "http://graphql.org/learn/",
+                "description": "The official docks"
+              }
+            ]
+          }
+        }
 
 ## Bugs and Feedback
-For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-graphql-example/issues).
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/springboot-graphql-example/issues).
 
 ## License
 MIT License
