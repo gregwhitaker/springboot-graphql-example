@@ -1,4 +1,5 @@
 # springboot-graphql-example
+[![Build Status](https://travis-ci.org/gregwhitaker/springboot-graphql-example.svg?branch=master)](https://travis-ci.org/gregwhitaker/springboot-graphql-example)
 
 An example of a [GraphQL](http://graphql.org/) service implemented in [Spring Boot](https://projects.spring.io/spring-boot/).
 
