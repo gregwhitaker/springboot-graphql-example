@@ -3,6 +3,16 @@
 
 An example of a [GraphQL](http://graphql.org/) service implemented in [Spring Boot](https://projects.spring.io/spring-boot/).
 
+## Running the Example
+You can start the example by running the following Gradle command:
+
+    $ ./gradlew bootRun 
+
+Once the application has started, use the embedded [Graphiql](https://github.com/graphql/graphiql) environment to interact with the API at [http://localhost:8080/graphiql](http://localhost:8080/graphiql).
+
+## Bugs and Feedback
+For bugs, questions, and discussions please use the [Github Issues](https://github.com/gregwhitaker/ratpack-graphql-example/issues).
+
 ## License
 MIT License
 
